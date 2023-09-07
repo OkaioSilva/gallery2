@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Viaoda+Libre&display=swap" rel="stylesheet">
+    
+    <title>Gallery</title>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    body{
+        background-color: #b8b3b3;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2em;
+    }
+    
+    h1{
+        font-weight: bold;
+        font-size: 2.3em;
+    } 
+    .galeria{ 
+        width: 60rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: .5em;
+        background-color: white;
+        padding: .5em;
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, .8);
+    }
+    
+    .galeria  .image{
+        flex-basis: calc(25% - .5em);
+        position: relative;
+        overflow: hidden;
+        flex-grow: 1;
+    } 
+    .image p{
+        padding: 1em;
+        background-color: rgba(0, 0, 0, .8);
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: .75em;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        opacity: 0.4;
+        transform: translateY(100%);
+    }
+    .image:hover p{
+        transform: translateY(0);
+        transition: all .3s ease-in-out;
+        opacity: 1;
+
+    }
+    .image a{
+        text-decoration: none;
+    }
+    .image img{
+        max-width: 100%;
+        display: block; 
+        opacity: 0.6;
+    }
+
+    .image:hover img{
+        opacity: 1;
+        transform: scale(1.1);
+        transition: all .3s ease-in-out;
+    }
+
+    .image a:hover{
+        opacity: 1;
+        visibility: visible;
+    } 
+
+    /* método do professor
+    .image::after{
+        content: "";
+        position: absolute;
+        background-color: white;
+        inset: 0;esse "inset" é um atalho para top, bottom etc
+        opacity: .5;
+        pointer-evens: none; anula eventos de clique
+        transition: opacity .5 ease-in-out;
+    }
+    .imagem::after{
+        opacity: 0;
+    }
+    */
+    </style>
+</head>
+<body>
+    <h1>Galeria</h1>
+    <section class="galeria">
+        <div class="image">
+            <a href="#">
+                <img src="https://picsum.photos/500/400?random=1" alt="imagem">
+                <p>descrição da imagem</p>
+            </a>
+        </div>
+        <div class="image">
+            <a href="#">
+                <img src="https://picsum.photos/500/400?random=2" alt="imagem">
+                <p>descrição da imagem</p>
+            </a>
+        </div>
+        <div class="image">
+            <a href="#">
+                <img src="https://picsum.photos/500/400?random=3" alt="imagem">
+                <p>descrição da imagem</p>
+            </a>
+        </div>
+        <div class="image">
+            <a href="#">
+                <img src="https://picsum.photos/500/400?random=4" alt="imagem">
+                <p>descrição da imagem</p>
+            </a>
+        </div>
+        <div class="image">
+            <a href="#">
+                <img src="https://picsum.photos/500/400?random=5" alt="imagem">
+                <p>descrição da imagem</p>
+            </a>
+        </div>
+        <div class="image">
+            <a href="#">
+                <img src="https://picsum.photos/500/400?random=6" alt="imagem">
+                <p>descrição da imagem</p>
+            </a>
+        </div>
+        <div class="image">
+            <a href="#">
+                <img src="https://picsum.photos/500/400?random=7" alt="imagem">
+                <p>descrição da imagem</p>
+            </a>
+        </div>
+        <div class="image">
+            <a href="#">
+                <img src="https://picsum.photos/500/400?random=8" alt="imagem">
+                <p>descrição da imagem</p>
+            </a>
+        </div>
+    </section>
+</body>
+</html>
